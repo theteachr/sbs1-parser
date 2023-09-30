@@ -23,6 +23,23 @@ _Automatic Dependent Surveillance–Broadcast (ADS-B)_ is a surveillance technol
 
 `dump1090` is a popular ADS-B Mode S decoder built specifically for RTL-SDR devices. When run, it outputs aircraft data in SBS-1 format on port 30003. This format provides real-time information about airborne aircraft, including details like speed, position, altitude, and more.
 
+### Example Data Stream
+
+```csv
+Message type,Transmission Type,Session ID,AircraftID,HexIdent,FlightID,Date message generated,Time message generated,Date message logged,Time message logged,Callsign,Altitude,GroundSpeed,Track,Latitude,Longitude,VerticalRate,Squawk,Alert (Squawk change),Emergency,SPI (Ident),IsOnGround
+MSG,4,5,211,4CA2D6,10057,2008/11/28,14:53:49.986,2008/11/28,14:58:51.153,,,408.3,146.4,,,64,,,,,
+MSG,8,5,211,4CA2D6,10057,2008/11/28,14:53:50.391,2008/11/28,14:58:51.153,,,,,,,,,,,,0
+MSG,4,5,211,4CA2D6,10057,2008/11/28,14:53:50.391,2008/11/28,14:58:51.153,,,408.3,146.4,,,64,,,,,
+MSG,3,5,211,4CA2D6,10057,2008/11/28,14:53:50.594,2008/11/28,14:58:51.153,,37000,,,51.45735,-1.02826,,,0,0,0,0
+MSG,8,5,812,ABBEE3,10095,2008/11/28,14:53:50.594,2008/11/28,14:58:51.153,,,,,,,,,,,,0
+MSG,3,5,276,4010E9,10088,2008/11/28,14:53:49.986,2008/11/28,14:58:51.153,,28000,,,53.02551,-2.91389,,,0,0,0,0
+MSG,4,5,276,4010E9,10088,2008/11/28,14:53:50.188,2008/11/28,14:58:51.153,,,459.4,20.2,,,64,,,,,
+MSG,8,5,276,4010E9,10088,2008/11/28,14:53:50.594,2008/11/28,14:58:51.153,,,,,,,,,,,,0
+MSG,3,5,276,4010E9,10088,2008/11/28,14:53:50.594,2008/11/28,14:58:51.153,,28000,,,53.02677,-2.91310,,,0,0,0,0
+MSG,4,5,769,4CA2CB,10061,2008/11/28,14:53:50.188,2008/11/28,14:58:51.153,,,367.7,138.6,,,-2432,,,,,
+MSG,8,5,769,4CA2CB,10061,2008/11/28,14:53:50.391,2008/11/28,14:58:51.153,,,,,,,,,,,,0
+```
+
 ## About DataSet (formerly known as Scalyr)
 
 SentinelOne's DataSet, formerly known as Scalyr, offers high-speed logging and server metrics for engineers. It's known for its lightning-fast search capabilities. Engineers often rely on DataSet to troubleshoot server issues, understand application behaviors, and ensure smooth operations.
